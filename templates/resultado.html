@@ -1,0 +1,7 @@
+{% extends formulario %}
+
+{% block resultado %}
+    {% for etiqueta, valor in detalles.items() %}
+        <p><strong>{{ etiqueta }}:</strong> {{ valor }}</p>
+    {% endfor %}
+{% endblock %}

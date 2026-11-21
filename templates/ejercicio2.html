@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block titulo %}Comparación de nombres{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta tarjeta-nombres" aria-label="Comparación de nombres">
+    <form class="formulario" method="post" action="{{ url_for('ejercicio2') }}">
+        <label for="nombre1">Nombre 1</label>
+        <input type="text" id="nombre1" name="nombre1"
+               value="{{ nombre1|default('') }}" required>
+
+        <label for="nombre2">Nombre 2</label>
+        <input type="text" id="nombre2" name="nombre2"
+               value="{{ nombre2|default('') }}" required>
+
+        <label for="nombre3">Nombre 3</label>
+        <input type="text" id="nombre3" name="nombre3"
+               value="{{ nombre3|default('') }}" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% block resultado %}{% endblock %}
+</section>
+{% endblock %}
